@@ -1,3 +1,12 @@
+''' 
+To run:
+python covidcases.py {country name}
+
+Example:
+python covidcases.py Bosnia
+'''
+
+
 import sys      # Used to get arguments from command line
 import requests # Used to fetch data from API 
 
@@ -6,12 +15,12 @@ class colors:          # Colors for printing - self-explanatory
     GREEN = '\033[92m'
     WHITE = '\033[0m'
 
-"""
+'''
 Function used for printing information
 [Arguments]:
     [keys]: list of wanted information to print
     [data]: dictionary with all the data fetched from API 
-"""
+'''
 def log_keys(keys, data): 
     max_len = 0 # Maximum length of key - will be used for space offset later 
     for key in keys:
